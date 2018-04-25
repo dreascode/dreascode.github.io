@@ -1,0 +1,54 @@
+//--------------------------------------------------
+// Main SCSS Directory
+//
+// This is where all scss and css files are imported
+//--------------------------------------------------
+
+// Vendor
+// Imported libraries, etc.
+@import 'vendor/_normalize.scss';
+
+// Helpers
+// Sass variables, functions, mixins, etc. for use in other files.
+// NO output css should be used in these files.
+@import 'helpers/_vars';
+@import 'helpers/_vars_z_index';
+@import 'helpers/_vars_layout';
+@import 'helpers/_mixins';
+
+// Base
+// General-usage css, such as element fonts, styles, resets
+@import 'base/_fonts';
+@import 'base/_elements';
+@import 'base/_util';
+
+// Layout
+// Components used for sizing and containment, such as grid systems and columns
+@import 'layout/_blocks.scss';
+@import 'layout/_col.scss';
+@import 'layout/_heroGrid.scss';
+@import 'layout/_row.scss';
+@import 'layout/_split.scss';
+
+
+// Modules
+// For discrete interface components
+@import 'modules/_btn.scss';
+@import 'modules/_donate.scss';
+@import 'modules/_field.scss';
+@import 'modules/_hdg.scss';
+@import 'modules/_hList.scss';
+@import 'modules/_icon.scss';
+@import 'modules/_link.scss';
+@import 'modules/_mod.scss';
+@import 'modules/_vList.scss';
+
+// Landmarks
+// Styling for specific pages or regions, generally not very modular
+@import 'landmarks/_footer.scss';
+@import 'landmarks/_header.scss';
+@import 'landmarks/_nav.scss';
+@import 'landmarks/_main.scss';
+// Overrides
+// Styles to override plugins
+// @import 'overrides/*';

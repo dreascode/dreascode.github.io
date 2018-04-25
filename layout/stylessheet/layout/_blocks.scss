@@ -1,0 +1,81 @@
+/*doc
+---
+title: Blocks
+name: blocks
+category: Layout
+---
+
+Allows a list of contents to take up space at defined widths similar to columns, but the content flows horizontally instead of vertically. Each block can be of arbitrary height and the tallest one will push the next row down.
+
+```html_example
+<ul class="blocks blocks-smallTablet-2 blocks-tablet-3">
+  <li class="well">
+    <div class="well_container">
+      <p>Block 1 This content will flow horizontally without the need for column containers. Eam velit legimus accommodare ne, no sint euismod melioad usu. His impedit ponderum pericula id. No eos diceret molestiae, pro ei meliore reformidans, in mea alii noster pertinacia.</p>
+    </div>
+  </li>
+  <li class="well">
+    <div class="well_container">
+      <p>Block 2 This content will flow horizontally without the need for column containers. Eam velit legimus accommodare ne, no sint euismod melioad usu. His impedit ponderum pericula id. No eos diceret molestiae, pro ei meliore reformidans, in mea alii noster pertinacia.</p>
+    </div>
+  </li>
+  <li class="well">
+    <div class="well_container">
+      <p>Block 3 This content will flow horizontally without the need for column containers. Eam velit legimus accommodare ne, no sint euismod melioad usu. Eam velit legimus accommodare ne, no sint euismod melioad usu. His impedit ponderum pericula id. No eos diceret molestiae, pro ei meliore reformidans, in mea alii noster pertinacia.</p>
+    </div>
+  </li>
+  <li class="well">
+    <div class="well_container">
+      <p>Block 4 This content will flow horizontally without the need for column containers. Eam velit legimus accommodare ne, no sint euismod melioad usu. His impedit ponderum pericula id. No eos diceret molestiae, pro ei meliore reformidans, in mea alii noster pertinacia.</p>
+    </div>
+  </li>
+  <li class="well">
+    <div class="well_container">
+      <p>Block 5 This content will flow horizontally without the need for column containers. Eam velit legimus accommodare ne, no sint euismod melioad usu. His impedit ponderum pericula id. No eos diceret molestiae, pro ei meliore reformidans, in mea alii noster pertinacia.</p>
+    </div>
+  </li>
+  <li class="well">
+    <div class="well_container">
+      <p>Block 3 This content will flow horizontally without the need for column containers. Eam velit legimus accommodare ne, no sint euismod melioad usu. Eam velit legimus accommodare ne, no sint euismod melioad usu. His impedit ponderum pericula id. No eos diceret molestiae, pro ei meliore reformidans, in mea alii noster pertinacia.</p>
+    </div>
+  </li>
+</ul>
+```
+
+*/
+
+$_blocks-gutter: 5%; // Needs to be a percentage
+$_blocks-vertical-gutter: 40px;
+$_blocks-vertical-gutter-lg: 80px;
+$_blocks-sizes: 1, 2, 3, 4;
+
+.blocks {
+  margin-left: -$_blocks-gutter;
+  margin-bottom: -$_blocks-vertical-gutter;
+  font-size: 0; // Removes whitespace between blocks
+
+  @include media($media-tablet) {
+    margin-bottom: -$_blocks-vertical-gutter-lg;
+  }
+
+  > * {
+    width: 100% - $_blocks-gutter; // To fill space if there are no size rules applied
+    margin-left: $_blocks-gutter;
+    margin-bottom: $_blocks-vertical-gutter;
+    display: inline-block;
+    font-size: $font-size-default; // Reset font size
+    vertical-align: top;
+
+    @include media($media-tablet) {
+      margin-bottom: $_blocks-vertical-gutter-lg;
+    }
+  }
+}
+
+@include blocks-layout($_blocks-gutter, $_blocks-sizes);
+
+@include blocks-layout($_blocks-gutter, $_blocks-sizes, $media-small-tablet, smallTablet);
+
+@include blocks-layout($_blocks-gutter, $_blocks-sizes, $media-tablet, tablet);
+
+@include blocks-layout($_blocks-gutter, $_blocks-sizes, $media-desktop, desktop);

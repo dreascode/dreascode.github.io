@@ -1,0 +1,40 @@
+//--------------------------------------
+// Columns
+//--------------------------------------
+
+.col {
+  display: table-cell;
+  width: 100%;
+  vertical-align: middle;
+}
+
+.col-item {
+  padding: 80px;
+  width: 50%;
+  min-height: 500px;
+}
+
+.col-item-green {
+  background-color: $color-green;
+  color: $color-black;
+}
+
+.col-item-white {
+  background-color: $color-white;
+}
+
+.col-item-black{
+  background-color: $color-black;
+}
+
+.col-item-center {
+  text-align: center;
+}
+
+.col-item-padded {
+  padding: 10%;
+}
+
+.col-footer {
+  width: 33.333%;
+}

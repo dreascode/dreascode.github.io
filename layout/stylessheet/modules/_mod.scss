@@ -1,0 +1,143 @@
+/*doc
+---
+title: Module
+name: mod
+category: Content
+---
+
+A generic structure containing a header, body, and footer with spacing. Header and footer are optional.
+
+```slim_example
+.mod
+  .mod_header Header Content
+  .mod_body Body Content
+  .mod_footer Footer Content
+```
+
+Useful for things like these collection links
+
+```slim_example
+ul.blocks.blocks-smallTablet-2.blocks-desktop-3
+  li
+    a.mod.mod-collection href="#"
+      .mod_img
+        .mod_img_tag Cooking
+        .aspect.aspect-widescreen
+          img src="http://lorempizza.com/400/300" alt=""
+      .mod_header
+        h2.hdg.hdg-2 Exploring Japan's food culture through its master artisans
+      .mod_body
+        .text.text-light Matt Goulding, author of Rice, Noodle, Fish, spent three months exploring the food in different regions of Japan.
+  li
+    a.mod.mod-collection href="#"
+      .mod_img
+        .mod_img_tag.mod_img_tag-em Giveaway
+        .aspect.aspect-widescreen
+          img src="http://lorempizza.com/400/300" alt=""
+      .mod_header
+        h2.hdg.hdg-2 Enter to Win the Spaghetti Cookbook by Chef Boyardee
+```
+
+*/
+
+.mod {
+  display: block;
+  position: relative;
+}
+
+// .mod_header {
+//   display: block;
+//   margin-bottom: 10px;
+// }
+
+// .mod_header-compressed {
+//   margin-bottom: 2px;
+// }
+
+.mod_img {
+  display: block;
+  margin-bottom: 10px;
+  position: relative;
+
+  img,
+  video {
+    width: 100%;
+  }
+}
+
+// .mod_img_tag {
+//   padding: 3px 10px;
+//   position: absolute;
+//   top: 10px;
+//   right: 0;
+//   z-index: $z-collection-tag;
+//   font-family: $font-family-sans;
+//   text-transform: uppercase;
+//   font-size: 1.4rem;
+//   font-weight: normal;
+//   line-height: 1;
+//   color: $color-white;
+//   background-color: $color-screen;
+//   transition: transform $transition, box-shadow $transition;
+// }
+
+// .mod_img_tag-em {
+//   font-weight: bold;
+//   box-shadow: 2px 2px 0 $color-shadow;
+//   right: -2px;
+//   background-color: $color-red;
+// }
+
+// .mod_footer {
+//   display: block;
+//   margin-top: 10px;
+// }
+
+// // Collection Item styles
+// .mod-collection {
+//   text-align: center;
+
+//   .mod_header {
+//     transition: color $transition;
+//   }
+
+//   .mod_img {
+//     position: relative;
+
+//     &:before {
+//       content: '';
+//       position: absolute;
+//       top: 0;
+//       right: 0;
+//       left: 0;
+//       bottom: 0;
+//       z-index: $z-collection-cover;
+//       background-color: rgba($color-black, 0);
+//       transition: background-color $transition;
+//     }
+//   }
+
+//   .mod_header,
+//   .mod_body {
+//     margin-right: 10px;
+//     margin-left: 10px;
+//   }
+
+//   &:hover {
+//     .mod_header {
+//       color: $color-red;
+//     }
+
+//     .mod_img:before {
+//       background-color: rgba($color-black, .2);
+//     }
+
+//     .mod_img_tag {
+//       transform: translate(0, -1px);
+//     }
+
+//     .mod_img_tag-em {
+//       box-shadow: 2px 3px 0 $color-shadow;
+//     }
+//   }
+// }

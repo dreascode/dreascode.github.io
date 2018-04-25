@@ -1,0 +1,66 @@
+/*doc
+---
+title: Split
+name: split
+category: Layout
+---
+
+Aligns content left or right. Uses the parent `.split` container for table-layout
+
+```slim_example
+.split
+  .split_first Left-aligned content
+  .split_last Right-aligned content
+```
+
+Vertically centered content, for example this widget:
+
+```slim_example
+div style="width: 300px;"
+  .split.split-center
+    .split_first
+      h3.hdg.hdg-4 Connect with Us
+    .split_last
+      .hList.hList-compressed
+        a href="#"
+          svg.icon.icon-social.icon-facebook viewBox="0 0 32 32" width="32" height="32"
+            use xlink:href="#icon-facebook"
+        a href="#"
+          svg.icon.icon-social.icon-twitter viewBox="0 0 32 32" width="32" height="32"
+            use xlink:href="#icon-twitter"
+        a href="#"
+          svg.icon.icon-social.icon-instagram viewBox="0 0 32 32" width="32" height="32"
+            use xlink:href="#icon-instagram"
+        a href="#"
+          svg.icon.icon-social.icon-pinterest viewBox="0 0 32 32" width="32" height="32"
+            use xlink:href="#icon-pinterest"
+        a href="#"
+          svg.icon.icon-social.icon-tumblr viewBox="0 0 32 32" width="32" height="32"
+            use xlink:href="#icon-tumblr"
+```
+
+*/
+
+.split {
+  display: table;
+  width: 100%;
+
+  > * {
+    display: table-cell;
+    vertical-align: top;
+  }
+}
+
+.split-center {
+  > * {
+    vertical-align: middle;
+  }
+}
+
+.split_first {
+  text-align: left;
+}
+
+.split_last {
+  text-align: right;
+}

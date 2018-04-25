@@ -1,0 +1,58 @@
+/*doc
+---
+title: Vertical Lists
+name: vList
+category: Lists
+---
+
+For vertically spacing content.
+
+```html_example
+<ul class="vList">
+  <li>First Item</li>
+  <li>Second Item</li>
+  <li>Third Item</li>
+  <li>Fourth Item</li>
+</ul>
+```
+
+It can apply to any type of element, such as the unordered list above, or these nested `<div>`s
+
+```html_example
+<div class="vList">
+  <div>First Item</div>
+  <div>Second Item</div>
+  <div>Third Item</div>
+  <div>Fourth Item</div>
+</div>
+```
+*/
+
+.vList {
+  > * {
+    display: block;
+    margin-bottom: 10px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.vList-condensed {
+  > * {
+    margin-bottom: 4px;
+  }
+}
+
+.vList-compressed {
+  > * {
+    margin-bottom: 1px;
+  }
+}
+
+.vList-collection {
+  > * {
+    margin-bottom: 30px;
+  }
+}

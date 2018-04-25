@@ -1,0 +1,71 @@
+/*doc
+---
+title: Icons
+name: icon
+category: Content
+---
+
+#### Social Icons
+
+```slim_example
+ul.hList.hList-compressed
+  li
+    svg.icon.icon-social.icon-facebook viewBox="0 0 32 32" width="32" height="32"
+      use xlink:href="#icon-facebook"
+  li
+    svg.icon.icon-social.icon-twitter viewBox="0 0 32 32" width="32" height="32"
+      use xlink:href="#icon-twitter"
+  li
+    svg.icon.icon-social.icon-instagram viewBox="0 0 32 32" width="32" height="32"
+      use xlink:href="#icon-instagram"
+  li
+    svg.icon.icon-social.icon-pinterest viewBox="0 0 32 32" width="32" height="32"
+      use xlink:href="#icon-pinterest"
+  li
+    svg.icon.icon-social.icon-tumblr viewBox="0 0 32 32" width="32" height="32"
+      use xlink:href="#icon-tumblr"
+```
+
+#### Chevron Icons
+
+```slim_example
+ul.hList
+  li
+    svg.icon viewBox="0 0 100 100" width="32" height="32"
+      use xlink:href="#icon-up"
+  li
+    svg.icon viewBox="0 0 100 100" width="32" height="32"
+      use xlink:href="#icon-down"
+  li
+    svg.icon viewBox="0 0 100 100" width="32" height="32"
+      use xlink:href="#icon-left"
+  li
+    svg.icon viewBox="0 0 100 100" width="32" height="32"
+      use xlink:href="#icon-right"
+```
+
+*/
+
+.icon {
+  display: inline-block;
+}
+
+.icon-social {
+  display: block;
+  width: 32px;
+  height: 32px;
+  fill: $color-white;
+  background-color: $color-grey-darker;
+  opacity: 1;
+  transition: opacity $transition, transform $transition;
+}
+
+.icon-social-smaller {
+  padding: 4px;
+}
+
+// .icon-facebook { background-color: $color-facebook; }
+// .icon-twitter { background-color: $color-twitter; }
+// .icon-pinterest { background-color: $color-pinterest; }
+// .icon-instagram { background-color: $color-instagram; }
+// .icon-tumblr { background-color: $color-tumblr; }

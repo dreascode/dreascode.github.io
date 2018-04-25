@@ -1,0 +1,126 @@
+/*doc
+---
+title: Form Fields
+name: field
+category: Interface
+---
+
+Normal field style with white background
+
+```slim_example
+.blocks.blocks-smallTablet-2.blocks-desktop-3
+  div
+    input.field type="text" placeholder="Placeholder"
+  div
+    .fieldGroup
+      .fieldGroup_input
+        input.field type="text" placeholder="Placeholder"
+      .fieldGroup_btn
+        button.btn.btn-attached Attached Button
+```
+
+Emphasis field style with grey background. Red button `.btn.btn-em` should accompany.
+
+```slim_example
+.blocks.blocks-smallTablet-2.blocks-desktop-3
+  div
+    input.field.field-em type="text" placeholder="Placeholder"
+  div
+    .fieldGroup
+      .fieldGroup_input
+        input.field.field-em type="text" placeholder="Placeholder"
+      .fieldGroup_btn
+        button.btn.btn-em.btn-attached Attached Button
+```
+
+Textarea
+
+```slim_example
+.blocks.blocks-smallTablet-2.blocks-desktop-3
+  div
+    textarea.field placeholder="Placeholder"
+  div
+    textarea.field.field-em placeholder="Placeholder"
+```
+
+
+*/
+
+// .field {
+//   display: inline-block;
+//   width: 100%;
+//   height: 28px;
+//   padding: 0 10px;
+//   border: 0;
+//   border-radius: 0;
+//   box-shadow: 2px 2px 0 $color-shadow;
+//   font-family: $font-family-sans;
+//   // scss-lint:disable PropertyUnits
+//   line-height: 28px;
+//   // scss-lint:enable PropertyUnits
+//   vertical-align: top;
+//   transition: box-shadow $transition;
+
+//   @include placeholder() {
+//     font-family: $font-family-serif;
+//     font-size: 1.4rem;
+//     font-style: italic;
+//     opacity: 1;
+//     color: $color-text-light;
+//   }
+
+//   &:focus {
+//     outline: 0;
+//     box-shadow: 2px 2px 0 $color-red;
+//   }
+// }
+
+// // scss-lint:disable QualifyingElement
+// textarea.field {
+//   border: 1px solid $color-shadow;
+// }
+// // scss-lint:enable QualifyingElement
+
+// .field-em {
+//   background-color: $color-grey-lightest;
+// }
+
+// .field-tall {
+//   padding-top: 8px;
+//   padding-bottom: 8px;
+//   height: 44px;
+// }
+
+// .field-inlay {
+//   margin-right: -40px;
+//   padding-right: 40px;
+// }
+
+// .field-mainSearch {
+//   height: 40px;
+//   // scss-lint:disable PropertyUnits
+//   line-height: 40px;
+//   // scss-lint:enable PropertyUnits
+
+//   + .btn-inlay {
+//     height: 40px;
+//   }
+// }
+
+// .field-attached {
+//   display: flex;
+
+//   > input {
+//     flex-grow: 1;
+//     width: auto;
+//     border-right: 0;
+//     border-top-right-radius: 0;
+//     border-bottom-right-radius: 0;
+//   }
+
+//   > .btn {
+//     width: auto;
+//     border-top-left-radius: 0;
+//     border-bottom-left-radius: 0;
+//   }
+// }

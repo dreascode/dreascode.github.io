@@ -1,0 +1,38 @@
+.hdg {
+  display: block;
+  font-family: $font-family-heading;
+  text-transform: uppercase;
+}
+
+.hdg-1 { font-size: 4rem; }
+.hdg-2 { font-size: 2.8rem; }
+.hdg-3 { font-size: 1.6rem; }
+
+.hdg-light {
+  color: $color-white;
+}
+
+.hdg-largest {
+  font-size: 12em;
+  line-height: 1;
+}
+
+.hdg-large {
+  font-size: 8em;
+  line-height: 1;
+}
+
+.hdg-lowercase {
+  text-transform: lowercase;
+}
+
+.hdg-1-hero {
+  font-size: 6rem;
+  font-weight: normal;
+}
+
+.hdg-infographic {
+  font-size: 3rem;
+  padding: 0 30px;
+  line-height: 1.4;
+}
