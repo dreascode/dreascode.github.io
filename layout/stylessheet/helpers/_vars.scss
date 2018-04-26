@@ -43,7 +43,9 @@ $color-grey-light: #dddddd;
 $color-grey: #c9c9c9;
 $color-grey-dark: #a9a9a9;
 $color-grey-darker: #6a6a6a;
-$color-grey-darkest: #333333;
+// $color-grey-darkest: #333333;
+$color-grey-darkest: #343741;
+
 // Aliases for spelling variations
 $color-gray-lightest: $color-grey-lightest;
 $color-gray-lighter: $color-grey-lighter;
@@ -68,6 +70,10 @@ $color-link-hover: darken($color-green, 20%);
 $color-selection: lighten($color-yellow, 20%);
 $color-screen: rgba($color-black, .7);
 
+//shadows
 $color-shadow: $color-grey-light;
 $color-shadow-hover: $color-grey;
 
+//buttons
+$color-btn: $color-black;
+$color-btn-hover: $color-green;

@@ -27,17 +27,58 @@ Featured stories and recipes area of the home page.
   background-color: $color-gray;
   display: table;
   width: 100%;
+  background-image: url('../images/note-to-self.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: 100%;
+  margin: auto;
+  padding: 52px 20px 20px;
+
+  @include media($media-small-tablet){
+     background-position-y: 70%;
+  }
 
   @include media($media-tablet) {
     height: 480px;
+    background-position-y: 60%;
   }
 }
 
 .heroGrid_text {
-  display: table-cell;
-  vertical-align: middle;
+  display: block;
   text-align: center;
 
+  @include media($media-tablet){
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+  }
+
+}
+
+.heroGrid_text_subhead {
+  color: $color-grey-darkest;
+  font-size: .8em;
+  line-height: 1.4;
+  width: 100%;
+  margin: 60px auto 0;
+  text-shadow:1px 2px 1px $color-white;
+  max-width: 300px;
+
+  @include media($media-mobile){
+    font-size: .875em;
+  }
+
+  @include media($media-small-tablet){
+    font-size: 1em;
+  }
+
+  @include media($media-tablet){
+    margin-top: 60px;
+    font-size: 1.4em;
+    max-width: 720px;
+  }
 }
 // .heroGrid_feature {
 //   border-bottom: 1px solid $color-white;

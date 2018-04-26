@@ -54,8 +54,8 @@ ul.hList
   display: block;
   width: 32px;
   height: 32px;
-  fill: $color-white;
-  background-color: $color-grey-darker;
+  // fill: $color-white;
+  // background-color: $color-grey-darker;
   opacity: 1;
   transition: opacity $transition, transform $transition;
 }

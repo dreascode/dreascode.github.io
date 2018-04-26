@@ -20,13 +20,18 @@
     li {
       display: table-cell;
       text-align: center;
-      padding: .75em;
+      padding: 0 12px;
+
+      &.nav_social {
+        padding: 0 8px;
+      }
 
       a {
         display: inline-block;
         height: 100%;
         vertical-align: middle;
         font-weight: 500;
+        line-height: 2;
         text-transform: uppercase;
         transition: color $transition;
 

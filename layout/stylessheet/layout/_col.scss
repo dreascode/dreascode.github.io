@@ -3,15 +3,31 @@
 //--------------------------------------
 
 .col {
-  display: table-cell;
+  display: table;
   width: 100%;
   vertical-align: middle;
+
+  @include media($media-tablet) {
+    display: table-cell;
+  }
 }
 
 .col-item {
   padding: 80px;
-  width: 50%;
+  width: 100%;
   min-height: 500px;
+
+  // &:after{
+  //   content: ' ';
+  //   clear: both;
+  // }
+
+  @include media($media-tablet) {
+    padding: 80px;
+    height: 100%;
+    min-height: 500px;
+    width: 50%;
+  }
 }
 
 .col-item-green {
@@ -23,8 +39,9 @@
   background-color: $color-white;
 }
 
-.col-item-black{
+.col-item-black {
   background-color: $color-black;
+  color: $color-white;
 }
 
 .col-item-center {
@@ -36,5 +53,9 @@
 }
 
 .col-footer {
-  width: 33.333%;
+  width: 100%;
+
+  @include media($media-tablet) {
+    width: 33.333%;
+  }
 }

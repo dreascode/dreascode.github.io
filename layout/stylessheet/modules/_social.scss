@@ -1,0 +1,45 @@
+/*doc
+---
+title: Social Icons
+name: social
+category: Interface
+---
+
+Styles for social media icons
+
+```slim_example
+```
+
+*/
+
+.social {
+  height: 32px;
+  width: 32px;
+  padding: 5px;
+  margin: auto;
+  border: 3px solid $color-btn;
+  border-radius: 50px; // 50px is arbitrary large amount; makes a circle or pill shape
+}
+
+.social_icon {
+  display: block;
+  margin: auto;
+  width: 16px;
+  height: 16px;
+  fill: $color-btn;
+}
+
+.social:hover,
+.social:hover .social_icon {
+  border-color: $color-btn-hover;
+  color: $color-btn-hover;
+  fill: $color-btn-hover;
+}
+
+.social-footer {
+border: 3px solid $color-white;
+}
+
+.social_icon-footer {
+  fill: $color-white;
+}
