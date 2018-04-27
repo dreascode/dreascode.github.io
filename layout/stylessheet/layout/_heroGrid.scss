@@ -27,19 +27,25 @@ Featured stories and recipes area of the home page.
   background-color: $color-gray;
   display: table;
   width: 100%;
-  background-image: url('../images/note-to-self.jpg');
+  background-image: url('../images/note-to-self-m.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position-x: center;
   background-position-y: 100%;
   margin: auto;
-  padding: 52px 20px 20px;
+  padding: 30px 20px 20px;
+
+  @include media($media-mobile){
+    background-position-y: 60%;
+  }
 
   @include media($media-small-tablet){
-     background-position-y: 70%;
+    background-image: url('../images/note-to-self.jpg');
+    background-position-y: 70%;
   }
 
   @include media($media-tablet) {
+    padding: 52px 20px 20px;
     height: 480px;
     background-position-y: 60%;
   }
@@ -54,24 +60,25 @@ Featured stories and recipes area of the home page.
     vertical-align: middle;
     text-align: center;
   }
-
 }
 
 .heroGrid_text_subhead {
   color: $color-grey-darkest;
-  font-size: .8em;
+  font-size: 1em;
   line-height: 1.4;
   width: 100%;
-  margin: 60px auto 0;
-  text-shadow:1px 2px 1px $color-white;
+  margin: 20px auto 20px;
+  text-shadow: 1px 2px 1px $color-white, 1px 2px 1px $color-white, -1px -2px 8px $color-white;
   max-width: 300px;
 
   @include media($media-mobile){
-    font-size: .875em;
+    font-size: 1em;
   }
 
   @include media($media-small-tablet){
+    margin: 60px auto 20px;
     font-size: 1em;
+    max-width: 420px;
   }
 
   @include media($media-tablet){

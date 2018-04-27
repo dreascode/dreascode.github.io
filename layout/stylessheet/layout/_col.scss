@@ -3,26 +3,60 @@
 //--------------------------------------
 
 .col {
-  display: table;
+  display: block;
+  overflow: hidden;
+  position: relative;
   width: 100%;
-  vertical-align: middle;
 
-  @include media($media-tablet) {
+
+  @include media($media-t-d) {
     display: table-cell;
+    vertical-align: middle;
   }
+
+  .col_social {
+    margin-top: 40px;
+
+    ul {
+      display: block;
+    }
+
+    li {
+      display: inline-block;
+      padding: 0 8px;
+
+      a {
+        display: inline-block;
+        height: 100%;
+        transition: color .175s;
+
+        &:hover {
+          border-color: $color-white;
+          color: $color-white;
+
+          svg {
+            color: $color-white;
+            fill: $color-white;
+          }
+        }
+      }
+
+    }
+  }
+
 }
 
+
 .col-item {
-  padding: 80px;
+  padding: 40px 20px;
   width: 100%;
   min-height: 500px;
 
-  // &:after{
-  //   content: ' ';
-  //   clear: both;
-  // }
+  @include media($media-small-tablet) {
+    padding: 80px;
+  }
 
-  @include media($media-tablet) {
+  @include media($media-t-d) {
     padding: 80px;
     height: 100%;
     min-height: 500px;
@@ -30,9 +64,27 @@
   }
 }
 
+.col-item-noHeightMin {
+  min-height: 100%;
+}
+
 .col-item-green {
-  background-color: $color-green;
-  color: $color-black;
+  // background-color: $color-green;
+  background: rgb(67,129,50);
+  background: linear-gradient(0deg, rgba(67,129,50,1) 63%, rgba(94,178,69,1) 100%);
+  color: $color-white;
+
+  @include media($media-mobile){
+    background: linear-gradient(0deg, rgba(67,129,50,1) 45%, rgba(94,178,69,1) 100%);
+  }
+
+  @include media($media-small-tablet){
+    background: linear-gradient(0deg, rgba(67,129,50,1) 0%, rgba(94,178,69,1) 100%);
+  }
+
+  @include media($media-t-d) {
+    background: linear-gradient(0deg, rgba(67,129,50,1) 10%, rgba(94,178,69,1) 100%);
+  }
 }
 
 .col-item-white {
@@ -55,7 +107,133 @@
 .col-footer {
   width: 100%;
 
-  @include media($media-tablet) {
+  @include media($media-t-d) {
     width: 33.333%;
+  }
+}
+
+.col-item-adulthood {
+  background-image: url('../images/adulthood.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.col-item-quote {
+  background-image: url('../images/quote.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+}
+
+.col_box {
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 10px;
+  width: 100%;
+  margin-top: 200px;
+  position: relative;
+
+  @include media($media-small-tablet) {
+    width: 70%;
+    text-align: left;
+    margin-left: -50px;
+    margin-bottom: -50px;
+    margin-top: 0;
+  }
+
+  @include media($media-desktop) {
+    width: 50%;
+  }
+
+  &:before {
+    content: " ";
+    background-image: url('../images/quote-svg-flipped.svg');
+    height: 32px;
+    width: 32px;
+    background-size: contain;
+    position: absolute;
+    top: -20px;
+    left: -10px;
+  }
+
+  &:after {
+    content: " ";
+    background-image: url('../images/quote-svg.svg');
+    height: 32px;
+    width: 32px;
+    background-size: contain;
+    position: absolute;
+    bottom: -20px;
+    right: -10px;
+  }
+}
+
+.col-item-knot {
+  // background-image: url('../images/knotsvg');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.col_svg {
+  svg {
+    height: 174px;
+    width: 334px;
+
+    @include media($media-small-tablet) {
+      height: 210px;
+      width: 400px;
+    }
+
+    @include media($media-tablet) {
+      height: 302px;
+      width: 575px;
+    }
+
+    @include media($media-t-d) {
+      height: 174px;
+      width: 334px;
+    }
+
+    @include media($media-desktop) {
+      height: 210px;
+      width: 400px;
+    }
+
+    @include media($media-wide) {
+      height: 350px;
+      width: 667px;
+    }
+  }
+}
+
+.col_svg-knot {
+  position: absolute;
+  left: -185px;
+  top: 100px;
+
+  @include media($media-small-tablet) {
+    left: -185px;
+    top: 185px;
+  }
+
+  @include media($media-tablet) {
+    left: -205px;
+    top: 124px;
+  }
+
+  @include media($media-t-d) {
+    left: -132px;
+    top: 276px;
+  }
+
+  @include media($media-desktop) {
+
+    left: -160px;
+    top: 170px;
+  }
+  @include media($media-wide){
+    left: -353px;
+    top: 106px;
   }
 }

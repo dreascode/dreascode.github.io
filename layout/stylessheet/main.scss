@@ -28,20 +28,19 @@
 @import 'layout/_col.scss';
 @import 'layout/_heroGrid.scss';
 @import 'layout/_row.scss';
-@import 'layout/_split.scss';
+@import 'layout/_section.scss';
 
 
 // Modules
 // For discrete interface components
+@import 'modules/_article.scss';
 @import 'modules/_btn.scss';
-@import 'modules/_donate.scss';
-@import 'modules/_field.scss';
 @import 'modules/_hdg.scss';
 @import 'modules/_hList.scss';
 @import 'modules/_icon.scss';
 @import 'modules/_link.scss';
-@import 'modules/_mod.scss';
 @import 'modules/_social.scss';
+@import 'modules/_text.scss';
 @import 'modules/_vList.scss';
 
 // Landmarks

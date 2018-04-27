@@ -3,27 +3,51 @@
 //--------------------------------
 
 .nav {
-  display: table-cell;
-  vertical-align: middle;
+  display: block;
   position: relative;
   font-family: $font-family-heading;
+  margin-top: 20px;
+
+  @include media($media-tablet) {
+    display: table-cell;
+    vertical-align: middle;
+    margin-top: 0;
+  }
 
   ul {
-    display: table;
-    position: absolute;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    margin-top: auto;
-    margin-bottom: auto;
+    display: block;
+    margin: auto;
+
+    @include media($media-tablet) {
+      display: table;
+      position: absolute;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      margin-top: auto;
+      margin-bottom: auto;
+    }
 
     li {
-      display: table-cell;
+      display: inline;
       text-align: center;
-      padding: 0 12px;
+      padding: 0 10px;
+
+      @include media($media-mobile) {
+        padding: 0 12px;
+      }
+
+      @include media($media-tablet) {
+        display: table-cell;
+      }
 
       &.nav_social {
         padding: 0 8px;
+        display: none;
+
+        @include media($media-t-d) {
+          display: inline-block;
+        }
       }
 
       a {
@@ -45,96 +69,3 @@
   }
 
 }
-
-// .nav_item {
-//   display: inline-block;
-//   margin-right: 15px;
-//   position: relative;
-
-//   @include media($media-small-tablet) {
-//     margin-right: 30px;
-//   }
-
-//   &:last-child {
-//     margin-right: 0;
-//   }
-// }
-
-// .nav_link {
-//   display: inline-block;
-//   padding: 12px 0;
-//   font-size: 1.4rem;
-//   text-transform: uppercase;
-//   font-weight: bold;
-//   transition: color $transition;
-
-//   &:hover {
-//     color: $color-red;
-//   }
-// }
-
-// .nav_button {
-//   background: transparent;
-//   padding: 2px 2px 2px 5px;
-//   margin: 0;
-//   border: 0;
-//   vertical-align: middle;
-
-//   svg {
-//     display: block;
-//     stroke-width: 5px;
-//     stroke: $color-text;
-//   }
-
-//   &:focus {
-//     outline: 0;
-
-//     svg {
-//       fill: $color-red;
-//       stroke: $color-red;
-//     }
-//   }
-// }
-
-// .nav_submenu {
-//   display: none;
-//   padding: 10px 0;
-//   position: absolute;
-//   top: 100%;
-//   right: 0;
-//   z-index: $z-nav-submenu;
-//   box-shadow: 2px 2px 0 $color-shadow-hover;
-//   background-color: $color-grey-lightest;
-//   white-space: nowrap;
-//   text-align: left;
-// }
-
-// .nav_submenu_link {
-//   display: block;
-//   padding: 4px 15px;
-//   transition: color $transition;
-
-//   &:hover {
-//     color: $color-red;
-//   }
-// }
-
-// .nav_link-secondary {
-//   padding: 5px 0 3px;
-
-//   @include media($media-tablet) {
-//     padding: 0;
-//   }
-// }
-
-// .nav-stPush {
-//   @include media($media-small-tablet) {
-//     position: relative;
-//     top: 35px;
-//   }
-
-//   @include media($media-tablet) {
-//     position: static;
-//     top: auto;
-//   }
-// }
