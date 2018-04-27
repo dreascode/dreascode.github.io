@@ -50,11 +50,27 @@
 .col-item {
   padding: 40px 20px;
   width: 100%;
-  min-height: 500px;
+  min-height: 300px;
 
   @include media($media-small-tablet) {
+    min-height: 500px;
     padding: 80px;
   }
+
+  @include media($media-t-d) {
+    padding: 80px;
+    height: 100%;
+    width: 50%;
+  }
+}
+
+.col-item-noHeightMin {
+  min-height: 100%;
+}
+
+.col-item-condensedBottom {
+  min-height: 100%;
+  padding-bottom: 20px;
 
   @include media($media-t-d) {
     padding: 80px;
@@ -64,12 +80,19 @@
   }
 }
 
-.col-item-noHeightMin {
+.col-item-condensedTop {
   min-height: 100%;
+  padding-top: 20px;
+
+  @include media($media-t-d) {
+    padding: 80px;
+    height: 100%;
+    min-height: 500px;
+    width: 50%;
+  }
 }
 
 .col-item-green {
-  // background-color: $color-green;
   background: rgb(67,129,50);
   background: linear-gradient(0deg, rgba(67,129,50,1) 63%, rgba(94,178,69,1) 100%);
   color: $color-white;
@@ -130,16 +153,31 @@
 .col_box {
   background-color: rgba(255, 255, 255, 0.7);
   padding: 10px;
-  width: 100%;
-  margin-top: 200px;
+  width: 80%;
   position: relative;
+  border-radius: 4px;
+
+  // @include media($media-small-tablet) {
+  //   width: 70%;
+  //   text-align: left;
+  //   margin-left: -50px;
+  //   margin-bottom: -50px;
+  //   margin-top: 0;
+  // }
+  @include media($media-mobile) {
+    width: 68%;
+  }
 
   @include media($media-small-tablet) {
-    width: 70%;
+    width: 50%;
     text-align: left;
     margin-left: -50px;
-    margin-bottom: -50px;
-    margin-top: 0;
+    margin-top: auto;
+    margin-bottom: 0;
+  }
+
+  @include media($media-t-d) {
+    width: 80%;
   }
 
   @include media($media-desktop) {

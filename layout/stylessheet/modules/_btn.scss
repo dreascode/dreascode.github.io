@@ -120,6 +120,8 @@ $_btn-transition-fast: .05s;
               transform $_btn-transition;
 
   &:hover {
+    // background: $color-;
+    background: linear-gradient(0deg, rgba(94,178,69,1) 0%, rgba(67,129,50,1) 100%);
     box-shadow: 0px 3px 0 $color-shadow-hover;
     transform: translate(0, -1px);
   }

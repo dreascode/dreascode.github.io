@@ -17,7 +17,7 @@ Styles for social media icons
   width: 32px;
   padding: 5px;
   margin: auto;
-  border: 3px solid $color-btn;
+  border: 3px solid $color-green;
   border-radius: 50px; // 50px is arbitrary large amount; makes a circle or pill shape
 }
 
@@ -26,14 +26,14 @@ Styles for social media icons
   margin: auto;
   width: 16px;
   height: 16px;
-  fill: $color-btn;
+  fill: $color-green;
 }
 
 .social:hover,
 .social:hover .social_icon {
-  border-color: $color-btn-hover;
-  color: $color-btn-hover;
-  fill: $color-btn-hover;
+  border-color: $color-link-hover;
+  color: $color-link-hover;
+  fill: $color-link-hover;
 }
 
 .social-footer {
