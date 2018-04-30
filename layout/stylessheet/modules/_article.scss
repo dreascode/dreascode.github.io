@@ -1,8 +1,0 @@
-.article {
-  margin: auto;
-  width: 100%;
-
-  @include media($media-tablet){
-    max-width: 500px;
-  }
-}
